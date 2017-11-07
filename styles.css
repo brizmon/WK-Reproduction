@@ -1,0 +1,6 @@
+body {
+    background: #e3d4c2;
+}
+circle {
+    mix-blend-mode: color-burn;
+}
