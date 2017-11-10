@@ -1,6 +1,92 @@
 body {
-    background: gainsboro;
+    --body-background: gainsboro;
+
+    background: var(--body-background);
 }
 circle {
     mix-blend-mode: color-burn;
 }
+.content--cursor{
+    cursor: url(cursors/cursor_dark.png) 16 16, url(cursors/cursor_dark.cur), pointer;
+}
+
+.playing {
+    mix-blend-mode: screen;
+    stroke: cornsilk;
+}
+
+
+
+
+
+
+.float{
+    animation: float 9s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes float {
+    100% {
+        transform: translate(20px, 30px)
+    }
+}
+
+.-float{
+    animation: float2 9s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes float2 {
+    100% {
+        transform: translate(20px, -40px)
+    }
+}
+
+.--float{
+    animation: float3 9s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes float3 {
+    100% {
+        transform: translate(60px, 10px)
+    }
+}
+
+.---float{
+    animation: float4 9s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes float4 {
+    100% {
+        transform: translate(-60px, 14px)
+    }
+}
+
+.move{
+    animation: move 9s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes move {
+    100% {
+        transform: rotate(-5deg)
+    }
+}
+
+.-move{
+    animation: move1 9s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes move1 {
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(-2deg)
+    }
+}
+
+
