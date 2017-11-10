@@ -10,6 +10,10 @@ circle {
     cursor: url(cursors/cursor_dark.png) 16 16, url(cursors/cursor_dark.cur), pointer;
 }
 
+.key {
+    transition: all 0.3s ease;
+}
+
 .playing {
     mix-blend-mode: screen;
     stroke: cornsilk;
