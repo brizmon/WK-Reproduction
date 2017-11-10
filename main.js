@@ -16,7 +16,7 @@ keys.forEach(key => key.addEventListener('transitionend', removeClass))
 
 function removeClass(e){
     // console.log(e)
-    if(e.propertyName !== 'stroke') return; // skip it if it's not a stroke - propertyName refers to the css that was applied dynamically when key is press ('.playing')
+    if(e.propertyName !== 'stroke') return; // skip it if it's not a stroke - propertyName returns the name of the CSS property associated with the transition, when a transitionevent occurs
     // console.log(e.propertyName)
     this.classList.remove('playing')
 }
