@@ -1,24 +1,4 @@
-window.onload = function(){
-// playAnimations();
 window.addEventListener('keydown', playSound);
-
-// function playAnimations(){
-//     const circles = document.querySelectorAll('circle')
-//     let cat = $('circle:nth-child(2)');
-//     console.log(cat)
-//     let animeCircles = anime({
-//         targets: '.key',
-//         opacity: .5,
-//         easing: 'easeOutExpo',
-//         direction: 'alternate',
-//         duration: 6000,
-//         loop: true
-//     })
-    
-//     animeCircles.play();
-//     // circles.forEach(circle => animeCircles.play())
-    
-// }
 
 function playSound(e){
     // console.log(e);
@@ -31,6 +11,14 @@ function playSound(e){
 }
 
 
+const keys = document.querySelectorAll('.key');
+keys.forEach(key => key.addEventListener('transitionend', removeClass))
 
+function removeClass(e){
+    // console.log(e)
+    if(e.propertyName !== 'stroke') return; // skip it if it's not a stroke - propertyName refers to the css that was applied dynamically when key is press ('.playing')
+    // console.log(e.propertyName)
+    this.classList.remove('playing')
 }
+
 
